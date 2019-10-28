@@ -1,9 +1,21 @@
-import React from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
+import Player from '../components/Player'
 
-const Title = styled.h1`
-  color: red;
-  font-size: 50px;
+const Grid = styled.section`
+  display: grid;
+  min-height: 100vh;
+  border: blue 5px solid;
 `
 
-export default () => <Title>My page</Title>
+export default () => {
+  const [colours, setColours] = useState(['#F7F7D3', '#A8E0FB', '#CDC1C1', '#CDC1C1', '#9BD3AC'])
+  return (
+    <Grid>
+      <Player />
+      <Player />
+      <Player />
+      <Player />
+    </Grid>
+  )
+}
